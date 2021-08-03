@@ -1,0 +1,15 @@
+.idea/
+*.pyc
+*.sub
+*.err
+*.log
+*.txt
+*.bmp
+*.pth
+*.tar
+*.jpg
+*.xlsx
+log/
+*.sh
+__pycache__
+result/
