@@ -92,9 +92,9 @@ def test(net, early_terminate, ops):
                     neg_et_meter.update(item[1], 1)
                 elif item[0] == 1:
                     pos_et_meter.update(item[1], 1)
-        print('Early Temination Ratio (Avg): %.3f%% + Number of OPs: %.2fM' % (et_meter.avg, et_meter.avg * ops))
-        print('Early Temination Ratio (Pos): %.3f%%' % (pos_et_meter.avg))
-        print('Early Temination Ratio (Neg): %.3f%%' % (neg_et_meter.avg))
+        print('Early Termination Ratio (Avg): %.3f%% + Number of OPs: %.2fM' % (et_meter.avg, et_meter.avg * ops))
+        print('Early Termination Ratio (Pos): %.3f%%' % (pos_et_meter.avg))
+        print('Early Termination Ratio (Neg): %.3f%%' % (neg_et_meter.avg))
 
 
 if __name__ == '__main__':
@@ -107,7 +107,7 @@ if __name__ == '__main__':
     print(net)
     print_model_weight_size(net)
     ops = print_model_ops_memory(net, iwidth=args.rsz_w, iheight=args.rsz_h)
-    #################################### run ####################################
+    # run
     net.load_state_dict(checkpoint['state_dict'])
     net = net.cuda()
     test(net, args.early_terminate, ops)
